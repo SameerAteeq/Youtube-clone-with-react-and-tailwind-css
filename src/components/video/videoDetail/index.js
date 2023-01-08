@@ -22,7 +22,6 @@ const VideoDeatils = () => {
     const fetchVideoDetail = () => {
         SetLoading(true);
         fetchDataFromApi(`video/details/?id=${id}`).then((res) => {
-            console.log(res, "vid");
             setVideo(res);
             SetLoading(false);
         })
@@ -30,7 +29,6 @@ const VideoDeatils = () => {
     const fetchRelatedVideos = () => {
         SetLoading(true);
         fetchDataFromApi(`video/related-contents/?id=${id}`).then((res) => {
-            console.log(res, "rel");
             setRelatedVideos(res);
             SetLoading(false);
         })

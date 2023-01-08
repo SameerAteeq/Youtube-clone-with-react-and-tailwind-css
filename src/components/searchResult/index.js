@@ -16,7 +16,6 @@ const SearchResult = () => {
     const fetchSearchResult = () => {
         SetLoading(true);
         fetchDataFromApi(`search/?q=${searchQuery}`).then(({ contents }) => {
-            console.log(contents, "result");
             setResult(contents);
             SetLoading(false);
         })
